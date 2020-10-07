@@ -30,10 +30,10 @@ public class Person {
     }
     
     public int getAge(){
-        return (int) toYears(LocalDate.now().toEpochDay() - birthdate.toEpochDay());
+        return toYears(LocalDate.now().toEpochDay() - birthdate.toEpochDay());
     }
     
-    public long toYears(long l){
-        return l/365;
+    public int toYears(long l){
+        return (int) (l/365.25);
     }
 }
